@@ -22,6 +22,7 @@ processPasteboard(modifier: trim)
 let trimClosure: (String) -> String = {
     $0.trimmingCharacters(in: .init(charactersIn: "."))
 }
+
 processPasteboard(modifier: trimClosure)
 ```
 

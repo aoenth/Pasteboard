@@ -1,12 +1,10 @@
 # Pasteboard
 
-Changes system-wide Pasteboard based on a function.
-
-
+Pasteboard is a library that changes the Pasteboard on macOS based on a function. It only works with text-based content.
 
 ## Usage
 
-The public function that this library provides is `processPasteboard(modifier:)`. It accepts a throwing closure that accepts a String and returns a String. You can pass in a function, a closure, or a keypath that modifies a `String`
+The public function that this library provides is `processPasteboard(modifier:)`. It accepts a throwing closure that accepts a String and returns a String. You can pass in a function, a closure, or a keypath that modifies a String.
 
 ```swift
 func trim(input: String) -> String {

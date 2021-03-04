@@ -21,14 +21,3 @@ public func processPasteboard(
         print("Pasteboard is empty!")
     }
 }
-
-
-
-func trim(input: String) -> String {
-let removePeriodClosure: (String) -> String = {
-    $0.trimmingCharacters(in: .init(charactersIn: " "))
-}
-    processPasteboard(modifier: \.capitalized)
-    processPasteboard(modifier: removePeriodClosure)
-    return ""
-}

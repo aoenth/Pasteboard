@@ -12,7 +12,7 @@ The public function that this library provides is `processPasteboard(modifier:)`
 ### Passing in a Function
 ```swift
 func trim(input: String) -> String {
-    input.trimmingCharacters(in: .init(charactersIn: "."))
+    input.trimmingCharacters(in: .init(charactersIn: " "))
 }
 
 processPasteboard(modifier: trim)
@@ -20,7 +20,7 @@ processPasteboard(modifier: trim)
 ### Passing in a Closure
 ```swift
 let trimClosure: (String) -> String = {
-    $0.trimmingCharacters(in: .init(charactersIn: "."))
+    $0.trimmingCharacters(in: .init(charactersIn: " "))
 }
 
 processPasteboard(modifier: trimClosure)
@@ -33,7 +33,7 @@ processPasteboard {
 }
 ```
 
-### Passing in a keypath
+### Passing in a Keypath
 ```swift
 processPasteboard(modifier: \.capitalized)
 ```

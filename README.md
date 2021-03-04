@@ -1,6 +1,6 @@
 # Pasteboard
 
-Pasteboard is a library that changes the Pasteboard on macOS based on a function. It only works with text-based content.
+Pasteboard is a Swift package for macOS applications that changes the Pasteboard on macOS based on a function. It only works with text-based content.
 
 ## Requirements
 * Swift Package Manager with Swift version 5.3 or higher

@@ -9,7 +9,7 @@ Pasteboard is a library that changes the Pasteboard on macOS based on a function
 
 The public function that this library provides is `processPasteboard(modifier:)`. It accepts a throwing closure that accepts a String and returns a String. You can pass in a function, a closure, or a keypath that modifies a String.
 
-Passing in a Function
+### Passing in a Function
 ```swift
 func trim(input: String) -> String {
     input.trimmingCharacters(in: .init(charactersIn: "."))

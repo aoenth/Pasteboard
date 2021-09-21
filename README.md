@@ -7,7 +7,9 @@ Pasteboard is a Swift package for macOS applications that changes the copied con
 
 ## Usage
 
-The public function that this library provides is `processPasteboard(modifier:)`. It accepts a throwing closure that accepts a String and returns a String. You can pass in a function, a closure, or a keypath that modifies a String.
+To get content from the pasteboard, use `getPasteboardContent()`. It returns a string if the pasteboard contains string.
+
+If the pasteboard contains String, you also can modify the pasteboard content by passing in a function with the signature `(String) -> String` into the function `processPasteboard(modifier:)`.
 
 ### Passing in a Function
 ```swift

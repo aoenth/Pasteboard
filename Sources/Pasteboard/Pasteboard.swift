@@ -3,12 +3,16 @@ import AppKit
 public func processPasteboard(
     modifier: (String) throws -> String
 ) rethrows {
-    let pasteboard = NSPasteboard.general
-    let typeToCheck = NSPasteboard.PasteboardType.string
     let string = getPasteboardContent()
     let newString = try modifier(string)
+    setPasteboardContent(newString)
+}
+
+public func setPasteboardContent(_ content: String) {
+    let pasteboard = NSPasteboard.general
+    let typeToCheck = NSPasteboard.PasteboardType.string
     pasteboard.clearContents()
-    pasteboard.setString(newString, forType: typeToCheck)
+    pasteboard.setString(content, forType: typeToCheck)
 }
 
 public func getPasteboardContent() -> String {
